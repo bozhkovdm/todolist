@@ -1,0 +1,51 @@
+.main-wrapper {
+	text-align: center;
+	padding: 20px 15%;
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+}
+
+.main-title {
+	font-size: 42px;
+	color: rgb(79, 79, 255);
+
+}
+
+#addItemInput_label {
+	width: 100%;
+	display: inline-block;
+	font-size: 32px;
+}
+
+.wrapper_addto {
+	border-top: 1px solid black;
+	padding-top: 45px;
+}
+
+input {
+	font-size: 18px;
+	text-align: center;
+	border: 0;
+	border-bottom: 1px solid grey;
+	&:focus {
+		outline: none;
+	}
+}
+
+button {
+	background-color: rgb(243, 204, 95);
+	border: 0;
+	padding: 15px 30px;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color:rgb(24, 24, 24);
+	width: 100%;
+	margin-top: 30px;
+	border-radius: 12px;
+}
+
+
+

@@ -1,5 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Item } from '../item';
+import { faPenToSquare, faTrash, faBan, faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
+
+
 
 @Component({
   selector: 'app-item',
@@ -9,6 +12,11 @@ import { Item } from '../item';
 export class ItemComponent {
   editable = false;
 
+  faPenToSquare = faPenToSquare;
+  faTrash = faTrash;
+  faBan = faBan;
+  faFloppyDisk = faFloppyDisk;
+
   @Input() item!: Item;
   @Input() newItem!: string;
   @Output() remove = new EventEmitter<Item>();
@@ -17,5 +25,5 @@ export class ItemComponent {
     this.editable = false;
     this.item.title = title;
   }
-
+  
 }

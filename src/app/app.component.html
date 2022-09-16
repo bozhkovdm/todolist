@@ -1,42 +1,23 @@
-<!-- <div class="main-wrapper">
-  <div class="main-title">Список дел</div>
-
-  <ul>
-    <li *ngFor="let item of items">{{item.title}} <span class="remove"></span></li>
-  </ul>
-</div>
-
-<label for="addItemInput">Добавить в список</label>
-
-<input #newItem
-       placeholder="текст задачи..."
-       (keyup.enter)="addItem(newItem.value); newItem.value = ''"
-       class="lg-text-input"
-       id="addItemInput" />
-
-<button class="button"
-        (click)="addItem(newItem.value)">Добавить
-</button> -->
-
-
 <div class="main-wrapper">
   <div class="main-title">Список дел</div>
-<ul>
-  <li *ngFor="let item of items">
-    <app-item (remove)="remove(item)"
-              [item]="item"></app-item>
-  </li>
-</ul>
+  <ul>
+    <li *ngFor="let item of items">
+      <app-item (remove)="remove(item)"
+                [item]="item"></app-item>
+    </li>
+  </ul>
 
-<label for="addItemInput">Добавить в список</label>
+  <div class="wrapper_addto">
+    <label id="addItemInput_label" for="addItemInput">Добавить в список</label>
 
-<input #newItem
-       placeholder="текст задачи..."
-       (keyup.enter)="addItem(newItem.value); newItem.value = ''"
-       class="lg-text-input"
-       id="addItemInput" />
+    <input #newItem
+           placeholder="текст задачи..."
+           (keyup.enter)="addItem(newItem.value); newItem.value = ''"
+           class="lg-text-input"
+           id="addItemInput" />
+  </div>
 
-<button class="button"
-        (click)="addItem(newItem.value)">Добавить
-</button>
+  <button class="button"
+          (click)="addItem(newItem.value)">Добавить
+  </button>
 </div>

@@ -1,0 +1,49 @@
+.item {
+  font-size: 24px;
+  margin-bottom: 30px;
+	&.completed label {
+		text-decoration: line-through;
+		color: rgb(95, 95, 95);
+	}
+}
+
+.btn-wrapper {
+  margin-top: 3px;
+  button {
+		border-radius: 12px;
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+}
+
+button {
+	background-color: rgb(243, 204, 95);
+	border: 0;
+	padding: 15px 30px;
+	font-size: 12px;
+	text-transform: uppercase;
+	color:rgb(44, 43, 43);
+	margin-bottom: 17px;
+}
+
+input {
+	font-size: 18px;
+	text-align: center;
+	border: 0;
+	border-bottom: 1px solid grey;
+	&:focus {
+		outline: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.btn-wrapper {
+		button:not(:last-child) {
+			margin-right: unset;
+		}
+		button {
+			width: 100%;
+		}
+	}
+}
